@@ -4,6 +4,7 @@
   "description": "A CLI tool for converting JSX to HTML",
   "main": "index.ts",
   "scripts": {
+      "postinstall": "node postinstall.js"
   },
   "author": "isaqueks",
   "license": "MIT",
@@ -12,6 +13,7 @@
     "@types/node": "^16.11.6",
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",
+    "@types/sass": "^1.43.0",
     "jsdom": "^18.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
