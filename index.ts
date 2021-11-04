@@ -14,8 +14,8 @@ import render from "./render";
             throw new Error(`Invalid arguments. User jsxtohtml help`);
         }
         if (args.help) {
-            console.log(`Usage: jsxtohtml -i <input JSX path> -o <output HTML path> [optional -t <template HTML file> -s <template element selector> -cssf <output css file> -csse <the style element selector to output css>]`);
-            console.log(`Example: jsxtohtml -i ./src/App.jsx -o static.html -t ./public/index.html -t div#root`);
+            console.log(`Usage: npm run jsxtohtml -i <input JSX path> -o <output HTML path> [optional -t <template HTML file> -s <template element selector> -cssf <output css file> -csse <the style element selector to output css>]`);
+            console.log(`Example: npm run jsxtohtml -i ./src/App.jsx -o static.html -t ./public/index.html -t div#root`);
         }
 
         if (await render(args as any) === true) {
@@ -35,10 +35,3 @@ import render from "./render";
     }
 
 })();
-
-// const file = './components/Test';
-// const component = import(file);
-
-// component.then(element => {
-//     ReactDOMServer.renderToNodeStream(element.default()).pipe(process.stdout);
-// })

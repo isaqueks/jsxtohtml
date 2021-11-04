@@ -30,7 +30,7 @@ async function checkFileDir(file: string) {
 async function check(input, output, template, selector, cssFile, cssElement) {
 
     if (!input || !output) {
-        throw new Error(`Both input and output required! Type "jsxtohtml help" for help.`);
+        throw new Error(`Both input and output required! Type "npm run jsxtohtml help" for help.`);
     }
 
     input = path.join(process.cwd(), input);
@@ -48,16 +48,16 @@ async function check(input, output, template, selector, cssFile, cssElement) {
 
     if (template) {
         if (!selector) {
-            throw new Error(`By using a template, a selector should be specified! Type "jsxtohtml help" for help.`);
+            throw new Error(`By using a template, a selector should be specified! Type "npm run jsxtohtml help" for help.`);
         }
         template = path.join(process.cwd(), template);
         await checkFile(template);
     }
     if (selector && !template) {
-        throw new Error(`Selector should be used with template! Type "jsxtohtml help" for help.`);
+        throw new Error(`Selector should be used with template! Type "npm run jsxtohtml help" for help.`);
     }
     if (cssElement && !template) {
-        throw new Error(`CSS Element selector should be used with a template! Type "jsxtohtml help" for help.`);
+        throw new Error(`CSS Element selector should be used with a template! Type "npm run jsxtohtml help" for help.`);
     }
 
     return [
