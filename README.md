@@ -10,7 +10,7 @@ You can install it directly from GitHub: `npm i -d https://github.com/isaqueks/j
 Note: As it runs directly in TypeScript (with ts-node), the installer will create a `.jsxtohtml` directory in project root and copy the module files to it. This is because the TypeScript compiler natively supports JSX syntax, and ts-node can't run files inside `node_modules`. Don't forget to include `.jsxtohtml` in your `.gitignore` file!
 
 ## Usage
-`npm run jsxtohtml <options>`  
+`npm run jsxtohtml -- <options>`  
 Options are:
 
     
@@ -21,7 +21,8 @@ Options are:
     -cssf The output CSS file <optional>
     -csse The template style element selector to insert CSS in. <optional>
 
-Example: `npm run jsxtohtml -i ./src/App.jsx -o ./output/static.html -t ./public/index.html -s div#root -cssf ./output/style.css`
+Example: `npm run jsxtohtml -- -i ./src/App.jsx -o ./output/static.html -t ./public/index.html -s div#root -cssf ./output/style.css`   
+Note: The `--` is to tell npm to pass the arguments to `jsxtohtml`
 
 ## Styles/SASS compiler
 In a React component, it's very common to use `import './style.css'` to import the component styles. By doing that, you must specify `jsxtohtml` what to do with the styles, otherwise `jsxtohtml` will just ignore them. By using the `-cssf` option (which stands for "cssfile"), you can specify a output CSS file to output all the styles in a single file. By using the `-csse` option (which stands for "csselement"), you can specify a style element selector to output the CSS to (like `<style>...css stuff...</style>`). By using `-csse`, you must use a template too.  
