@@ -31,7 +31,7 @@ if (!package.scripts) {
     package.scripts = {};
 }
 
-package.scripts['jsxtohtml'] = 'ts-node ./jsxtohtml/index.ts';
+package.scripts['jsxtohtml'] = 'ts-node ./.jsxtohtml/index.ts';
 fs.writeFileSync(packJson, JSON.stringify(package));
 
 fs.mkdirSync(targetDir);
