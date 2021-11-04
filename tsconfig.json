@@ -11,11 +11,5 @@
       "noImplicitThis": false,
       "allowJs": true,
       "jsx": "react-jsx",
-    },
-    "exclude": [
-        "tests"
-    ],
-    "include": [
-        "../src/"
-    ]
+    }
   }
